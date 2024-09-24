@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Brute Force</title>
+</head>
+<body>
+    <h1>Test de Brute Force</h1>
+    <form id="loginForm">
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="password">
+        <button type="button" onclick="checkPassword()">Se connecter</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        const correctPassword = "1234"; // Remplace par le mot de passe correct
+
+        function checkPassword() {
+            const inputPassword = document.getElementById('password').value;
+            const result = document.getElementById('result');
+
+            if (inputPassword === correctPassword) {
+                result.textContent = "Mot de passe correct !";
+            } else {
+                result.textContent = "Mot de passe incorrect.";
+            }
+        }
+    </script>
+</body>
+</html>
